@@ -1,11 +1,29 @@
 {
     "name": "@mediv0/rate-limit",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "rate limit telegram bots",
     "main": "index.js",
     "author": "mediv0",
     "license": "MIT",
+    "private": false,
     "types": "./dist/index.d.ts",
+    "keywords": [
+        "bot",
+        "rate-limit",
+        "telegraf-rate-limit",
+        "telegram-rate-limit",
+        "telegram-bot",
+        "bot-rate-limit",
+        "telegrambot-rate-limit"
+    ],
+    "homepage": "https://github.com/mediv0/telegram-rate-limiter",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mediv0/telegram-rate-limiter"
+    },
+    "bugs": {
+        "url": "https://github.com/mediv0/telegram-rate-limiter/issues"
+    },
     "devDependencies": {
         "@types/jest": "^27.4.1",
         "@types/redis": "^4.0.11",

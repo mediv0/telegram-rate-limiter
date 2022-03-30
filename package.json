@@ -1,5 +1,5 @@
 {
-    "name": "@zarchi/rate-limit",
+    "name": "@mediv0/rate-limit",
     "version": "0.1.0",
     "description": "rate limit telegram bots",
     "main": "index.js",

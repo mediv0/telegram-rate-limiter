@@ -14,17 +14,17 @@ adding other drivers is not supported yet. ( will be soon )
 ## Install
 
 ```
-yarn add @zarchi/rate-limit
+yarn add @mediv0/rate-limit
 ```
 or
 ```
-npm install @zarchi-rate-limit
+npm install @mediv0/rate-limit
 ```
 
 ## usage example
 
 ```js
-import { Limiter } from "@zarchi/rate-limit";
+import { Limiter } from "@mediv0/rate-limit";
 
 // init
 const limiter = new Limiter("memory", {

@@ -37,7 +37,7 @@ const limiter = new Limiter("memory", {
 bot.on("message", async (msg) => {
     try {
         const userId = msg.chat.id;
-        limiter.limit(userId);
+        await limiter.limit(userId);
         bot.sendMessage(chatId, "Hello World!");
     } catch (e) {
         // catch rate limit errors

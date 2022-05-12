@@ -1,12 +1,12 @@
 {
     "name": "@mediv0/rate-limit",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "description": "rate limit telegram bots",
-    "main": "index.js",
+    "main": "dist/index.js",
     "author": "mediv0",
     "license": "MIT",
     "private": false,
-    "types": "./dist/index.d.ts",
+    "types": "dist/index.d.ts",
     "files": [
         "dist",
         "src"

@@ -1,26 +1,26 @@
 const path = require("path");
 
 module.exports = {
-    entry: "./src/index.ts",
+    entry: {
+        main: "./src/index.ts",
+    },
     mode: "production",
     externals: {
         redis: "redis",
         "@types/redis": "@types/redis",
     },
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                use: "ts-loader",
-                exclude: /node_modules/,
-            },
-        ],
+    output: {
+        path: path.resolve(__dirname, "dist"),
+        filename: "index.js",
     },
     resolve: {
-        extensions: [".tsx", ".ts", ".js"],
+        // Add ".ts" and ".tsx" as resolvable extensions.
+        extensions: [".ts", ".tsx", ".js"],
     },
-    output: {
-        filename: "index.js",
-        path: path.resolve(__dirname, "dist"),
+    module: {
+        rules: [
+            // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
+            { test: /\.tsx?$/, loader: "ts-loader" },
+        ],
     },
 };

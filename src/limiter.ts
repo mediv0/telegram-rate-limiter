@@ -20,7 +20,6 @@ export class Limiter<K extends keyof driver> {
 
     public async limit(userId: string): Promise<void> | never {
         const user = await this.dbDriver.getVal(userId);
-        console.log("hello world");
         if (user === undefined) {
             await this.dbDriver.setVal(userId, { timestamp: Date.now(), count: this.max });
             return;

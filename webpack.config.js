@@ -1,14 +1,12 @@
 const path = require("path");
+const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
     entry: {
         main: "./src/index.ts",
     },
     mode: "production",
-    externals: {
-        redis: "redis",
-        "@types/redis": "@types/redis",
-    },
+    externals: [nodeExternals()],
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "index.js",

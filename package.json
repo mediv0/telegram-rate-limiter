@@ -1,6 +1,6 @@
 {
     "name": "@mediv0/rate-limit",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "description": "rate limit telegram bots",
     "main": "dist/index.js",
     "author": "mediv0",

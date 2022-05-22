@@ -1,12 +1,12 @@
 {
     "name": "@mediv0/rate-limit",
-    "version": "0.2.4",
+    "version": "0.2.7",
     "description": "rate limit telegram bots",
-    "main": "dist/index.js",
+    "main": "dist/limiter.js",
     "author": "mediv0",
     "license": "MIT",
     "private": false,
-    "types": "dist/index.d.ts",
+    "types": "dist/limiter.d.ts",
     "files": [
         "dist",
         "src"
@@ -44,7 +44,6 @@
         "test": "jest --coverage",
         "build": "webpack --mode production",
         "deploy": "push-dir --dir=. --branch=master --cleanup --remote=origin https://github.com/zarchiGold/telegram-rate-limiter.git",
-        "publish": "npm run build && npm publish"
     },
     "dependencies": {
         "redis": "^4.0.4"

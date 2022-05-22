@@ -26,5 +26,6 @@ export class RedisDriver implements IBaseStrategyImpl {
     private async init(): Promise<void> {
         this.client.on("error", (err) => console.log("Redis Client Error", err));
         await this.client.connect();
+        console.log("[TELEGRAM LIMITER]: Connected to redis driver successfully");
     }
 }

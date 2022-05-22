@@ -42,7 +42,7 @@
     },
     "scripts": {
         "test": "jest --coverage",
-        "build": "webpack",
+        "build": "webpack --mode production",
         "deploy": "push-dir --dir=. --branch=master --cleanup --remote=origin https://github.com/zarchiGold/telegram-rate-limiter.git",
         "publish": "npm run build && npm publish"
     },

@@ -1,5 +1,5 @@
 import { IBucketImpl } from "./_types";
-import { Limiter } from "./index";
+import { Limiter } from "./limiter";
 import { MemoryDriver } from "./strategy/memory.controller";
 import { RedisDriver } from "./strategy/redis.controller";
 

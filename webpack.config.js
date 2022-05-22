@@ -2,9 +2,7 @@ const path = require("path");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-    entry: {
-        main: "./src/index.ts",
-    },
+    entry: "./src/index.ts",
     mode: "production",
     externals: [nodeExternals()],
     output: {
@@ -18,7 +16,7 @@ module.exports = {
     module: {
         rules: [
             // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-            { test: /\.tsx?$/, loader: "ts-loader" },
+            { test: /\.ts?$/, loader: "ts-loader" },
         ],
     },
 };

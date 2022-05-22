@@ -42,8 +42,8 @@
     },
     "scripts": {
         "test": "jest --coverage",
-        "build": "webpack --mode production",
-        "deploy": "push-dir --dir=. --branch=master --cleanup --remote=origin https://github.com/zarchiGold/telegram-rate-limiter.git",
+        "build": "./node_modules/.bin/tsc",
+        "deploy": "push-dir --dir=. --branch=master --cleanup --remote=origin https://github.com/zarchiGold/telegram-rate-limiter.git"
     },
     "dependencies": {
         "redis": "^4.0.4"

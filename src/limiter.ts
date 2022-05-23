@@ -28,8 +28,7 @@ export class Limiter<K extends keyof driver> {
         const diff = this.timestampDiff(user.timestamp, Date.now());
 
         if (diff >= this.interval) {
-            user.timestamp = Date.now();
-            user.count = this.max;
+            await this.dbDriver.setVal(userId, { timestamp: Date.now(), count: this.max });
             return;
         }
 
@@ -37,7 +36,7 @@ export class Limiter<K extends keyof driver> {
             throw new Error("Limit reached");
         }
 
-        user.count--;
+        await this.dbDriver.setVal(userId, { timestamp: user.timestamp, count: user.count - 1 });
     }
 
     public getDatabase(): { [key: string]: IBucketImpl } | undefined {
